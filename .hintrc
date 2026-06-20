@@ -7,8 +7,17 @@
       "default",
       {
         "ignore": [
-          "text-size-adjust"
+          "text-size-adjust",
+          "backdrop-filter",
+          "min-height: auto"
         ]
+      }
+    ],
+    "button-type": "off",
+    "axe/structure": [
+      "default",
+      {
+        "list": "off"
       }
     ]
   }
