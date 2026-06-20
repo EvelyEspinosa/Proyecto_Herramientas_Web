@@ -9,7 +9,9 @@
         "ignore": [
           "text-size-adjust",
           "backdrop-filter",
-          "min-height: auto"
+          "min-height: auto",
+          "scrollbar-width",
+          "scrollbar-width: none"
         ]
       }
     ],

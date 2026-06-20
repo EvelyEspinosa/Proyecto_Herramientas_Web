@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SimpleCart Manager</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- ── NAVBAR ── -->
+<nav>
+  <a class="nav-logo" href="#" onclick="showPage('inicio');return false;">
+    <div class="nav-logo-icon nav-logo-icon-img">
+      <img src="img/logo.webp" alt="Logo" /></div>
+    <div class="nav-logo-text">SimpleCart<br>Manager</div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#" id="nav-inicio" class="active" onclick="showPage('inicio');return false;">Inicio</a></li>
+    <li><a href="#" id="nav-diagnostico" onclick="showPage('diagnostico');return false;">Diagnóstico y Modelo</a></li>
+    <li><a href="#" id="nav-infraestructura" onclick="showPage('infraestructura');return false;">Infraestructura y Pagos</a></li>
+    <li><a href="#" id="nav-logistica" onclick="showPage('logistica');return false;">Logística y Operaciones</a></li>
+    <li><a class="soon">Casos de Éxito / Blog</a></li>
+    <li><a class="soon">Recursos</a></li>
+    <li><a class="soon">Contacto</a></li>
+  </ul>
+  <button class="nav-cta" onclick="showPage('diagnostico')">Comenzar</button>
+</nav>
+
+<!-- ══════════════════════════════════════
+     PÁGINA 1 — INICIO
+══════════════════════════════════════ -->
+<section class="page active" id="page-inicio">
+
+  <!-- HERO con Animación 1: Teléfono -->
+  <div class="hero">
+    <div class="hero-text">
+      <div class="hero-badge">Plataforma Educativa de e-Commerce</div>
+      <h1>Aprende a vender en línea <span>desde cero</span></h1>
+      <p>SimpleCart Manager te guía paso a paso: desde diagnosticar tu idea hasta configurar pagos, gestionar inventario y hacer crecer tu tienda digital en Panamá y el mundo.</p>
+      <div class="hero-actions">
+        <button class="btn-primary" onclick="showPage('diagnostico')">Empezar ahora →</button>
+        <button class="btn-outline" onclick="document.getElementById('video-section').scrollIntoView({behavior:'smooth'})">Ver el proyecto</button>
+      </div>
+    </div>
+    <!-- Hero visual: laptop e-commerce -->
+    <div class="hero-img-col">
+      <img src="img/hero.webp" alt="Tienda e-commerce en laptop" class="hero-laptop-img" />
+    </div>
+  </div>
+
+    <!-- VALUE STRIP: candado en "Infraestructura" -->
+  <div class="value-strip">
+    <h2>¿Qué aprenderás aquí?</h2>
+    <p class="subtitle">Todo lo que necesitas para montar, operar y escalar tu e-commerce, explicado en lenguaje simple.</p>
+    <div class="value-grid">
+      <div class="value-card-img">
+        <div class="value-card-img-wrap">
+          <img src="img/celular.webp" alt="Diagnóstico de ventas" class="top" />
+        </div>
+        <h3>Diagnóstico de tu negocio</h3>
+        <p>Evalúa si tu idea tiene potencial real de mercado antes de invertir tiempo y dinero.</p>
+      </div>
+
+      <div class="value-card-img">
+        <div class="value-card-img-wrap">
+          <img src="img/candado.webp" alt="Secure Transaction Lock" />
+        </div>
+        <h3>Infraestructura y Pagos</h3>
+        <p>Elige la plataforma correcta, configura pasarelas de pago y protege a tus clientes.</p>
+      </div>
+
+      <div class="value-card-img">
+        <div class="value-card-img-wrap">
+          <img src="img/logistica.webp" alt="Logística y entregas" />
+        </div>
+        <h3>Logística y entregas</h3>
+        <p>Gestiona inventario, empaques y mensajería para que cada pedido llegue a tiempo.</p>
+      </div>
+
+      <div class="value-card-img">
+        <div class="value-card-img-wrap">
+          <img src="img/interactivo.webp" alt="Escalabilidad y crecimiento" />
+        </div>
+        <h3>Escalabilidad</h3>
+        <p>Analiza tus datos, automatiza procesos y expande tu operación.</p>
+      </div>
+    </div>
+  </div>
+            
+
+  <!-- ROADMAP -->
+  <div class="roadmap-section">
+    <div class="section-header">
+      <span class="section-label">Tu camino</span>
+      <h2 class="section-title">Roadmap de Digitalización</h2>
+      <p class="section-sub">Un proceso estructurado en 4 fases para convertir tu idea en una tienda en línea rentable.</p>
+    </div>
+    <div class="roadmap-grid">
+      <div class="roadmap-item">
+        <div class="roadmap-dot">🔍</div>
+        <div class="roadmap-phase">Fase 1</div>
+        <div class="roadmap-title">Diagnóstico</div>
+        <p class="roadmap-desc">Evaluación de viabilidad del producto y mercado.</p>
+      </div>
+      <div class="roadmap-item">
+        <div class="roadmap-dot">💳</div>
+        <div class="roadmap-phase">Fase 2</div>
+        <div class="roadmap-title">Infraestructura Digital</div>
+        <p class="roadmap-desc">Selección de plataformas y pasarelas de pago seguras.</p>
+      </div>
+      <div class="roadmap-item">
+        <div class="roadmap-dot">📦</div>
+        <div class="roadmap-phase">Fase 3</div>
+        <div class="roadmap-title">Logística</div>
+        <p class="roadmap-desc">Gestión de envíos y cumplimiento de la última milla.</p>
+      </div>
+      <div class="roadmap-item">
+        <div class="roadmap-dot">🚀</div>
+        <div class="roadmap-phase">Fase 4</div>
+        <div class="roadmap-title">Escalabilidad</div>
+        <p class="roadmap-desc">Análisis de datos y expansión operativa.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- VIDEO -->
+  <div class="video-section">
+    <div class="section-header">
+      <span class="section-label">Presentación</span>
+      <h2 class="section-title">Conoce Nuestro Proyecto</h2>
+      <p class="section-sub">Descubre qué es SimpleCart Manager y cómo puede transformar tu emprendimiento digital.</p>
+    </div>
+    <div class="video-wrapper">
+      <video controls class="project-video">
+        <source src="video1.mp4" type="video/mp4" />
+        Tu navegador no soporta video HTML5.
+      </video>
+    </div>
+  </div>
+
+</section>
+
+<!-- ══════════════════════════════════════
+     PÁGINA 2 — DIAGNÓSTICO
+══════════════════════════════════════ -->
+<section class="page" id="page-diagnostico">
+  <div class="page-hero">
+    <span class="section-label">Fase 1 · Diagnóstico</span>
+    <h1>Diagnóstico y <span>Modelo de Negocio</span></h1>
+    <p>Antes de construir tu tienda en línea, necesitas validar tu idea. Aquí aprenderás a analizar tu producto, conocer a tu cliente y elegir el modelo de negocio que mejor se adapta a ti.</p>
+  </div>
+
+  <div class="diag-intro">
+    <div class="diag-intro-text">
+      <h2>¿Por qué es crucial el diagnóstico?</h2>
+      <p>El 70% de los negocios en línea que fracasan no lo hacen por falta de dinero, sino por falta de validación previa. Un diagnóstico sólido te ahorra meses de esfuerzo y recursos mal invertidos.</p>
+      <p>Aprenderás a evaluar cuatro dimensiones clave: tu producto, tu mercado objetivo, tu competencia y tu capacidad operativa.</p>
+      <div class="highlight">💡 <strong>Dato clave:</strong> Un emprendedor que valida su idea antes de lanzar tiene 3 veces más probabilidades de alcanzar rentabilidad en el primer año.</div>
+      <div class="dashboard-img-block">
+        <img src="img/diagnostico.webp" alt="Dashboard de ventas" />
+        <div class="dashboard-img-caption">📊 Panel de control de ventas en tiempo real</div>
+      </div>
+    </div>
+    <div class="diag-cards-mini">
+      <div class="mini-card"><h4>Producto</h4><p>¿Resuelve un problema real? ¿Tiene demanda comprobable?</p></div>
+      <div class="mini-card"><h4>Cliente ideal</h4><p>¿Quién te va a comprar? ¿Dónde está? ¿Cuánto paga?</p></div>
+      <div class="mini-card"><h4>Competencia</h4><p>¿Qué hacen los demás bien? ¿Cuál es tu diferenciador?</p></div>
+      <div class="mini-card"><h4>Capacidad</h4><p>¿Puedes cumplir los pedidos con los recursos que tienes?</p></div>
+    </div>
+  </div>
+
+  <div class="steps-section">
+    <div class="section-header">
+      <span class="section-label">Proceso</span>
+      <h2 class="section-title">Pasos del Diagnóstico</h2>
+      <p class="section-sub">Sigue este proceso estructurado para evaluar tu idea con criterios de negocio reales.</p>
+    </div>
+    <div class="steps-grid">
+      <div class="step-card"><div class="step-num">01</div><h3>Define tu propuesta de valor</h3><p>Responde en una oración qué vendes, a quién y por qué lo prefieren frente a la competencia.</p><ul><li>Describe el problema que resuelves</li><li>Identifica al comprador específico</li><li>Explica qué te hace diferente</li><li>Valida que el cliente pagaría por eso</li></ul></div>
+      <div class="step-card"><div class="step-num">02</div><h3>Analiza el mercado</h3><p>Investiga si hay suficiente demanda y qué tan accesible es ese segmento desde Panamá.</p><ul><li>Busca volumen de búsquedas en Google</li><li>Revisa ventas de competidores en Amazon</li><li>Estima el tamaño del mercado local</li><li>Identifica tendencias crecientes</li></ul></div>
+      <div class="step-card"><div class="step-num">03</div><h3>Estudia a tu competencia</h3><p>Conocer lo que ya existe te permite encontrar huecos de mercado que puedes ocupar.</p><ul><li>Lista tus 3 competidores directos</li><li>Analiza precios y canales</li><li>Detecta quejas de sus clientes</li><li>Define en qué puedes ser mejor</li></ul></div>
+      <div class="step-card"><div class="step-num">04</div><h3>Calcula tu viabilidad financiera</h3><p>Estima cuánto necesitas vender para cubrir costos y cuándo empiezas a ganar.</p><ul><li>Suma costos fijos mensuales</li><li>Calcula el costo unitario</li><li>Define precio y margen</li><li>Proyecta unidades a vender</li></ul></div>
+      <div class="step-card"><div class="step-num">05</div><h3>Valida con clientes reales</h3><p>Antes de invertir en tecnología, consigue tu primera venta real.</p><ul><li>Crea una landing page sencilla</li><li>Usa redes para pre-vender</li><li>Encuesta a personas del perfil objetivo</li><li>Acepta un pedido real aunque sea manual</li></ul></div>
+      <div class="step-card"><div class="step-num">06</div><h3>Redacta tu Modelo de Negocio</h3><p>Plasma todo en un Business Model Canvas simplificado.</p><ul><li>Segmento de clientes y canales</li><li>Propuesta de valor</li><li>Fuentes de ingresos y costos</li><li>Recursos, actividades y socios clave</li></ul></div>
+    </div>
+  </div>
+
+  <div class="models-section">
+    <div class="section-header">
+      <span class="section-label">Modelos</span>
+      <h2 class="section-title">¿Qué modelo de negocio es para ti?</h2>
+      <p class="section-sub">El modelo que elijas define cómo generas dinero. Conoce las principales opciones para e-commerce.</p>
+    </div>
+    <div class="models-grid">
+      <div class="model-card featured">
+        <span class="model-badge">Más popular</span>
+        <h3>Tienda propia con inventario</h3>
+        <p>Compras productos, los almacenas y los vendes. Control total del precio, marca y experiencia del cliente.</p>
+        <div class="model-tags">
+          <span class="tag">Control total</span>
+          <span class="tag">Requiere capital</span>
+          <span class="tag">Mayor margen</span>
+        </div>
+      
+      
+      
+      </div>
+      <div class="model-card">
+        <h3>Dropshipping</h3>
+        <p>Vendes productos de terceros sin inventario. El proveedor envía directamente al cliente.</p>
+        <div class="model-tags">
+          <span class="tag">Bajo riesgo</span>
+          <span class="tag">Menor margen</span>
+          <span class="tag">Fácil de comenzar</span>
+        </div>
+      </div>
+      <div class="model-card"><h3>Productos digitales</h3><p>Vendes cursos, plantillas, ebooks. Se entrega automáticamente y genera ingresos pasivos.</p><div class="model-tags"><span class="tag">Sin inventario</span><span class="tag">Escalable</span><span class="tag">Alto margen</span></div></div>
+      <div class="model-card"><h3>Suscripción / membresía</h3><p>Los clientes pagan mensual o anual por acceso a productos o servicios. Ingresos predecibles.</p><div class="model-tags"><span class="tag">Ingreso recurrente</span><span class="tag">Fidelización</span><span class="tag">Mayor LTV</span></div></div>
+    </div>
+  </div>
+
+  <div class="checklist-section">
+    <div class="section-header">
+      <span class="section-label">Checklist</span>
+      <h2 class="section-title">¿Estás listo para pasar a la Fase 2?</h2>
+      <p class="section-sub">Verifica estos puntos antes de avanzar. Si marcas al menos 8 de 10, estás listo.</p>
+    </div>
+    <div class="checklist-wrapper">
+      <div class="checklist-group">
+        <h3>Producto y mercado</h3>
+        <div class="checklist-item"><div class="ci-check">✓</div><div class="ci-text"><strong>Propuesta de valor definida</strong><span>Sé exactamente qué vendo y por qué me elegirían a mí.</span></div></div>
+        <div class="checklist-item"><div class="ci-check">✓</div><div class="ci-text"><strong>Cliente ideal identificado</strong><span>Tengo un perfil de cliente con edad, hábitos e intención de compra.</span></div></div>
+        <div class="checklist-item"><div class="ci-check">✓</div><div class="ci-text"><strong>Demanda verificada</strong><span>Hay búsquedas, ventas de competidores o personas que pagarían.</span></div></div>
+        <div class="checklist-item"><div class="ci-check">✓</div><div class="ci-text"><strong>Competencia analizada</strong><span>Conozco a mis 3 principales competidores y mi diferenciador.</span></div></div>
+        <div class="checklist-item"><div class="ci-check">✓</div><div class="ci-text"><strong>Primera venta o pre-venta</strong><span>Alguien real expresó interés o realizó un pago por mi producto.</span></div></div>
+      </div>
+      <div class="checklist-group">
+        <h3>Modelo y finanzas</h3>
+        <div class="checklist-item"><div class="ci-check">✓</div><div class="ci-text"><strong>Modelo de negocio elegido</strong><span>Sé si haré tienda propia, dropshipping, digital o suscripción.</span></div></div>
+        <div class="checklist-item"><div class="ci-check">✓</div><div class="ci-text"><strong>Costos calculados</strong><span>Conozco cuánto me cuesta producir, empacar y enviar.</span></div></div>
+        <div class="checklist-item"><div class="ci-check">✓</div><div class="ci-text"><strong>Precio de venta definido</strong><span>Mi precio cubre costos y deja un margen de al menos 30%.</span></div></div>
+        <div class="checklist-item"><div class="ci-check">✓</div><div class="ci-text"><strong>Punto de equilibrio calculado</strong><span>Sé cuántas ventas necesito al mes para no perder dinero.</span></div></div>
+        <div class="checklist-item"><div class="ci-check">✓</div><div class="ci-text"><strong>Capacidad operativa evaluada</strong><span>Puedo manejar los pedidos iniciales con mis recursos actuales.</span></div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="cta-band">
+    <h2>¿Tienes tu diagnóstico listo? <span>Avanza a la Fase 2</span></h2>
+    <p>La siguiente etapa te guiará para elegir tu plataforma de ventas, configurar métodos de pago y construir la infraestructura digital de tu tienda.</p>
+    <button class="btn-primary" onclick="showPage('infraestructura')">Infraestructura y Pagos →</button>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     PÁGINA 3 — INFRAESTRUCTURA Y PAGOS
+══════════════════════════════════════ -->
+<section class="page" id="page-infraestructura">
+
+  <div class="page-hero">
+    <span class="section-label">Fase 2 · Infraestructura y Pagos</span>
+    <h1>Plataforma, Pagos y <span>Seguridad Digital</span></h1>
+    <p>Una vez que validaste tu idea, llega el momento de elegir dónde vender, cómo cobrar y cómo proteger los datos de tus clientes. Aquí encontrarás todo lo que necesitas saber para construir los cimientos digitales de tu tienda.</p>
+  </div>
+
+  <!-- value strip with lock animation -->
+  <div class="value-strip">
+    <div class="anim-lock-wrap" id="lockWrap" onclick="toggleLock()">
+      <div class="anim-lock-glow"></div>
+      <div class="anim-shackle"></div>
+      <div class="anim-lock-body">
+        <div class="anim-lock-grid"></div>
+        <div class="anim-lock-glare"></div>
+        <div class="anim-lock-ring"></div>
+        <span class="anim-lock-icon" id="lockIcon">🛍</span>
+        <div class="anim-lock-status">
+          <span class="anim-lock-status-dot"></span>
+          <span id="lockStatusText">STANDBY_CIPHER_ACTIVE</span>
+        </div>
+      </div>
+      <div class="anim-lock-badge" id="lockBadge">
+        🛡
+        <span class="anim-lock-badge-label" id="lockBadgeLabel">System OK</span>
+      </div>
+      <div class="anim-conn-badge" id="connBadge">
+        <div class="anim-conn-top">
+          <span class="anim-conn-dot"></span>
+          <span class="anim-conn-text" id="connText">Conexión Segura</span>
+        </div>
+        <div class="anim-conn-sub">TLS_1.3_STABLE / STANDBY</div>
+      </div>
+      <div class="anim-orbit-ring1"></div>
+      <div class="anim-orbit-ring2"></div>
+      <div class="anim-orbit-key"><div class="anim-orbit-key-inner">🔑</div></div>
+      <div class="anim-orbit-dot"><div class="anim-orbit-dot-inner"></div></div>
+      <div class="anim-spark"></div>
+      <div class="anim-spark"></div>
+      <div class="anim-spark"></div>
+      <div class="anim-spark"></div>
+    </div>
+    <div class="segurit">
+      <h2 >Seguridad ante todo</h2>
+      <p>Proteger la información de tus clientes no es opcional: es un requisito legal y de confianza. Desde la configuración de SSL hasta la elección de pasarelas de pago seguras, cada detalle cuenta para que tu tienda transmita profesionalismo y seguridad.</p>
+      <p class="content">Haz clic en el candado para simular el establecimiento de un canal encriptado seguro, igual que ocurre cuando activas un certificado SSL en tu tienda.</p>
+    </div>
+  </div>
+
+  <!-- Platform types -->
+  <div class="models-section">
+    <div class="section-header">
+      <span class="section-label">Plataformas</span>
+      <h2 class="section-title">Elige dónde construir tu tienda</h2>
+      <p class="section-sub">Cada plataforma tiene ventajas según tu presupuesto, conocimiento técnico y nivel de control que necesites.</p>
+    </div>
+    <div class="models-grid">
+      <div class="model-card featured">
+        <span class="model-badge">Recomendada</span>
+        <h3>Shopify</h3>
+        <p>Plataforma todo-en-uno. Ideal para principiantes. Incluye hosting, plantillas, pasarela de pago y soporte 24/7. Comisiones mensuales + transaccionales.</p>
+        <div class="model-tags"><span class="tag">Fácil</span><span class="tag">Hosting incluido</span><span class="tag">Pago mensual</span></div>
+      </div>
+      <div class="model-card">
+        <h3>WooCommerce</h3>
+        <p>Plugin de WordPress. Control total del diseño y funcionalidad. Ideal si ya tienes experiencia técnica o presupuesto ajustado. Software gratuito (hosting aparte).</p>
+        <div class="model-tags"><span class="tag">Gratuito</span><span class="tag">Requiere hosting</span><span class="tag">Personalizable</span></div>
+      </div>
+      <div class="model-card">
+        <h3>Tienda Libre / Mercado Shops</h3>
+        <p>Soluciones locales para LATAM. Integración con Mercado Pago. Buenas para empezar rápido en la región con poco presupuesto inicial.</p>
+        <div class="model-tags"><span class="tag">Local</span><span class="tag">Mercado Pago</span><span class="tag">Gratuito inicial</span></div>
+      </div>
+      <div class="model-card">
+        <h3>BigCommerce / Wix eCommerce</h3>
+        <p>Alternativas con buen balance entre facilidad y personalización. BigCommerce es fuerte en escalabilidad; Wix es ideal para catálogos pequeños.</p>
+        <div class="model-tags"><span class="tag">Escalable</span><span class="tag">Plantillas</span><span class="tag">Soporte</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Payment gateways -->
+  <div class="steps-section">
+    <div class="section-header">
+      <span class="section-label">Pasarelas de Pago</span>
+      <h2 class="section-title">¿Cómo vas a cobrar?</h2>
+      <p class="section-sub">Las pasarelas de pago procesan las transacciones de tus clientes de forma segura. Conoce las opciones disponibles.</p>
+    </div>
+    <div class="steps-grid">
+      <div class="step-card">
+        <div class="step-num">01</div>
+        <h3>Mercado Pago</h3>
+        <p>La más usada en LATAM. Acepta tarjetas, efectivo (Pago Fácil, Rapipago) y transferencias. Ideal para empezar en la región. Comisiones competitivas.</p>
+        <ul><li>Sin costo de instalación</li><li>Checkout personalizable</li><li>Split de pagos</li></ul>
+      </div>
+      <div class="step-card">
+        <div class="step-num">02</div>
+        <h3>Stripe</h3>
+        <p>Líder global. Excelente documentación y API. Acepta más de 135 monedas. Ideal si planeas vender internacionalmente. Requiere cuenta en país soportado.</p>
+        <ul><li>API robusta</li><li>Recurrencia nativa</li><li>Prevención de fraude</li></ul>
+      </div>
+      <div class="step-card">
+        <div class="step-num">03</div>
+        <h3>PayPal</h3>
+        <p>Reconocido mundialmente. Los clientes confían en él. Puedes usarlo como botón de pago o checkout completo. Bueno para empezar sin conocimientos técnicos.</p>
+        <ul><li>Fácil integración</li><li>Protección al comprador</li><li>Amplia cobertura</li></ul>
+      </div>
+      <div class="step-card">
+        <div class="step-num">04</div>
+        <h3>Payphone / Nequi</h3>
+        <p>Soluciones de pago locales en Panamá. Payphone permite cobros con tarjeta y código QR. Nequi permite transferencias instantáneas entre usuarios.</p>
+        <ul><li>Pagos locales</li><li>QR y link de pago</li><li>Comisiones bajas</li></ul>
+      </div>
+      <div class="step-card">
+        <div class="step-num">05</div>
+        <h3>Transferencia / Depósito</h3>
+        <p>Método tradicional sin comisiones. Ideal para ventas B2B o clientes de confianza. Puedes automatizar con alerts bancarios o confirmación manual.</p>
+        <ul><li>Sin comisiones</li><li>B2B frecuente</li><li>Requiere gestión manual</li></ul>
+      </div>
+      <div class="step-card">
+        <div class="step-num">06</div>
+        <h3>Criptomonedas</h3>
+        <p>Acepta Bitcoin, USDT o stablecoins mediante pasarelas como Binance Pay o OpenNode. Ideal para un nicho tech-savvy. Volatilidad a considerar.</p>
+        <ul><li>Sin bancos</li><li>Comisiones bajas</li><li>Mercado nicho</li></ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Seguridad checklist -->
+  <div class="checklist-section">
+    <div class="section-header">
+      <span class="section-label">Seguridad</span>
+      <h2 class="section-title">Checklist de infraestructura segura</h2>
+      <p class="section-sub">Antes de lanzar, asegúrate de cumplir con estos puntos para proteger tu tienda y a tus clientes.</p>
+    </div>
+    <div class="checklist-wrapper">
+      <div class="checklist-group">
+        <h3>Plataforma y dominio</h3>
+        <div class="checklist-item"><div class="ci-check">✓</div><div class="ci-text"><strong>Dominio propio configurado</strong><span>Compra un dominio .com, .com.pa o similar y conéctalo a tu tienda.</span></div></div>
+        <div class="checklist-item"><div class="ci-check">✓</div><div class="ci-text"><strong>Certificado SSL activo</strong><span>HTTPS obligatorio. La mayoría de plataformas lo incluyen gratis (Let's Encrypt).</span></div></div>
+        <div class="checklist-item"><div class="ci-check">✓</div><div class="ci-text"><strong>CDN / aceleración</strong><span>Usa Cloudflare o similar para velocidad y protección DDoS.</span></div></div>
+        <div class="checklist-item"><div class="ci-check">✓</div><div class="ci-text"><strong>Backups automáticos</strong><span>Configura respaldos diarios de productos, pedidos y configuraciones.</span></div></div>
+        <div class="checklist-item"><div class="ci-check">✓</div><div class="ci-text"><strong>Términos y condiciones</strong><span>Redacta políticas claras de envío, devolución, privacidad y cookies.</span></div></div>
+      </div>
+      <div class="checklist-group">
+        <h3>Pagos y cumplimiento legal</h3>
+        <div class="checklist-item"><div class="ci-check">✓</div><div class="ci-text"><strong>Pasarela de pago integrada</strong><span>Configura al menos un método de cobro (tarjeta, transferencia o efectivo).</span></div></div>
+        <div class="checklist-item"><div class="ci-check">✓</div><div class="ci-text"><strong>Cumplimiento PCI DSS</strong><span>Verifica que tu pasarela cumpla con estándares de seguridad de datos.</span></div></div>
+        <div class="checklist-item"><div class="ci-check">✓</div><div class="ci-text"><strong>Autenticación 2FA</strong><span>Activa doble factor en el admin de tu tienda y pasarela de pago.</span></div></div>
+        <div class="checklist-item"><div class="ci-check">✓</div><div class="ci-text"><strong>Facturación electrónica</strong><span>Configura la emisión de facturas digitales según legislación panameña (DG).
+</span></div></div>
+        <div class="checklist-item"><div class="ci-check">✓</div><div class="ci-text"><strong>Prueba de compra real</strong><span>Realiza una transacción de prueba de principio a fin antes de lanzar.</span></div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="cta-band">
+    <h2>Infraestructura lista? <span>Avanza a Logística</span></h2>
+    <p>La siguiente fase te guiará en la gestión de inventario, empaques, mensajería y operaciones del día a día.</p>
+    <button class="btn-primary" onclick="showPage('logistica')">Logística y Operaciones →</button>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     PÁGINA 4 — LOGÍSTICA Y OPERACIONES
+══════════════════════════════════════ -->
+<section class="page" id="page-logistica">
+
+  <div class="page-hero">
+    <span class="section-label">Fase 3 · Logística y Operaciones</span>
+    <h1>Inventario, Empaques y <span>Última Milla</span></h1>
+    <p>Una vez que tu tienda está en línea y puedes cobrar, el siguiente reto es hacer llegar los productos a tus clientes. Aquí aprenderás a gestionar inventario, elegir métodos de envío y optimizar tus operaciones logísticas.</p>
+  </div>
+
+  <!-- value strip with arrow animation -->
+  <div class="value-strip">
+    <div class="operation">
+      <h2>Operaciones que escalan</h2>
+      <p>La logística es el corazón operativo de tu e-commerce. Desde recibir un pedido hasta que llega a la puerta del cliente, cada paso debe estar sincronizado. Una operación eficiente reduce costos, mejora la experiencia del cliente y te permite escalar.</p>
+      <p>Haz clic en la animación para simular una sincronización de datos logísticos y ver cómo los nodos de tu red de operaciones se activan en tiempo real.</p>
+    </div>
+    <div class="anim-arrow-wrap" id="arrowWrap" onclick="triggerSync()">
+      <div class="anim-arrow-glow"></div>
+      <div class="anim-arrow-inner">
+        <!-- peak -->
+        <div class="anim-peak">
+          <div class="anim-peak-side">
+            📦
+            <div class="scan-bar"></div>
+          </div>
+          <div class="anim-peak-center">
+            📈
+            <div class="anim-peak-badge">
+              <div class="ping"></div>
+              ✓
+            </div>
+          </div>
+          <div class="anim-peak-side">
+            📋
+            <div class="scan-bar"></div>
+          </div>
+        </div>
+        <div class="anim-connect-line"></div>
+        <!-- grid body -->
+        <div class="anim-grid-body">
+          <div class="laser"></div>
+          <div class="shine"></div>
+          <div class="anim-node-grid" id="nodeGrid">
+            <!-- generated by buildNodeGrid() -->
+          </div>
+          <!-- sync label -->
+          <div class="anim-sync-label">
+            <div class="anim-sync-ping">
+              <span class="anim-sync-ping-dot"></span>
+              <span class="anim-sync-text">NODE_TRANS</span>
+            </div>
+            <div class="anim-sync-val" id="syncVal">+14% SYNC</div>
+          </div>
+        </div>
+        <!-- share button -->
+        <div class="anim-share-btn" onclick="event.stopPropagation();triggerSync()" title="Sincronizar Datos">🔄</div>
+        <!-- globe badge -->
+        <div class="anim-globe-badge">
+          <div class="anim-globe-icon">🌐</div>
+          <div>
+            <div class="anim-globe-label">User Nodes</div>
+            <div class="anim-globe-val" id="globeVal">482</div>
+          </div>
+        </div>
+        <!-- shadow -->
+        <div class="shadow"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Logistics topics -->
+  <div class="models-section">
+    <div class="section-header">
+      <span class="section-label">Operaciones</span>
+      <h2 class="section-title">Áreas clave de la logística</h2>
+      <p class="section-sub">Dominar estas áreas te permitirá operar de forma eficiente y ofrecer una experiencia de entrega que tus clientes recordarán.</p>
+    </div>
+    <div class="models-grid">
+      <div class="model-card featured">
+        <span class="model-badge">Fundamental</span>
+        <h3>Gestión de inventario</h3>
+        <p>Saber qué tienes, dónde está y cuándo se agota. Usa herramientas como hojas de cálculo o sistemas básicos de inventario para empezar.</p>
+        <div class="model-tags"><span class="tag">Stock mínimo</span><span class="tag">Alertas</span><span class="tag">Rotación</span></div>
+      </div>
+      <div class="model-card">
+        <h3>Empaque y preparación</h3>
+        <p>El unboxing es parte de la experiencia. Elige empaques adecuados al producto, incluye instrucciones y protege contra daños durante el envío.</p>
+        <div class="model-tags"><span class="tag">Costo por unidad</span><span class="tag">Marca</span><span class="tag">Sostenibilidad</span></div>
+      </div>
+      <div class="model-card">
+        <h3>Mensajería y envíos</h3>
+        <p>Selecciona entre opciones locales (Correos de Panamá, mensajería privada) e internacionales (DHL, FedEx). Negocia tarifas por volumen.</p>
+        <div class="model-tags"><span class="tag">Última milla</span><span class="tag">Tracking</span><span class="tag">Tarifas</span></div>
+      </div>
+      <div class="model-card">
+        <h3>Cumplimiento y devoluciones</h3>
+        <p>Establece políticas claras de envío y devolución. Un proceso de devolución sencillo genera confianza y mejora la reputación de tu tienda.</p>
+        <div class="model-tags"><span class="tag">Políticas</span><span class="tag">Logística inversa</span><span class="tag">Satisfacción</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Steps for logistics -->
+  <div class="steps-section">
+    <div class="section-header">
+      <span class="section-label">Procesos</span>
+      <h2 class="section-title">Flujo logístico paso a paso</h2>
+      <p class="section-sub">Desde que el cliente hace clic en "comprar" hasta que recibe su pedido, este es el camino que sigue tu producto.</p>
+    </div>
+    <div class="steps-grid">
+      <div class="step-card">
+        <div class="step-num">01</div>
+        <h3>Recepción del pedido</h3>
+        <p>El sistema te notifica de una nueva compra. Verifica el pago, los datos del cliente y la disponibilidad del producto en inventario.</p>
+        <ul><li>Notificación automática</li><li>Verificación de pago</li><li>Confirmación al cliente</li></ul>
+      </div>
+      <div class="step-card">
+        <div class="step-num">02</div>
+        <h3>Preparación del pedido</h3>
+        <p>Localiza los productos en tu inventario, verifica su estado y empaqueta cuidadosamente. Incluye notas de agradecimiento o instructivos.</p>
+        <ul><li>Picking de productos</li><li>Control de calidad</li><li>Empaque y etiquetado</li></ul>
+      </div>
+      <div class="step-card">
+        <div class="step-num">03</div>
+        <h3>Despacho y envío</h3>
+        <p>Entrega el paquete a la mensajería elegida. Genera el número de seguimiento y comparte la información con el cliente.</p>
+        <ul><li>Generación de guía</li><li>Tracking en tiempo real</li><li>Notificación de despacho</li></ul>
+      </div>
+      <div class="step-card">
+        <div class="step-num">04</div>
+        <h3>Última milla</h3>
+        <p>La entrega final al cliente. Coordina ventanas de entrega, maneja direcciones difíciles y asegúrate de que el cliente reciba satisfecho.</p>
+        <ul><li>Coordinación de entrega</li><li>Confirmación de recepción</li><li>Soporte post-entrega</li></ul>
+      </div>
+      <div class="step-card">
+        <div class="step-num">05</div>
+        <h3>Seguimiento y soporte</h3>
+        <p>Monitorea el estado del envío. Responde dudas del cliente sobre tiempos, direcciones o daños. Gestiona devoluciones si es necesario.</p>
+        <ul><li>Chat / WhatsApp</li><li>Gestión de incidencias</li><li>Logística inversa</li></ul>
+      </div>
+      <div class="step-card">
+        <div class="step-num">06</div>
+        <h3>Análisis y mejora</h3>
+        <p>Revisa métricas como tiempo de entrega, costo por envío y satisfacción del cliente. Usa esos datos para optimizar tu operación.</p>
+        <ul><li>KPIs logísticos</li><li>Encuestas de satisfacción</li><li>Mejora continua</li></ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Logistics checklist -->
+  <div class="checklist-section">
+    <div class="section-header">
+      <span class="section-label">Checklist</span>
+      <h2 class="section-title">¿Estás listo para escalar?</h2>
+      <p class="section-sub">Verifica estos puntos antes de buscar crecimiento. Si marcas al menos 8 de 10, tu operación está sólida.</p>
+    </div>
+    <div class="checklist-wrapper">
+      <div class="checklist-group">
+        <h3>Inventario y productos</h3>
+        <div class="checklist-item"><div class="ci-check">✓</div><div class="ci-text"><strong>Inventario actualizado</strong><span>Tienes un registro claro de cuántas unidades tienes de cada producto.</span></div></div>
+        <div class="checklist-item"><div class="ci-check">✓</div><div class="ci-text"><strong>Proveedores confirmados</strong><span>Tus fuentes de producto son confiables y tienes alternativas en caso de quiebre de stock.</span></div></div>
+        <div class="checklist-item"><div class="ci-check">✓</div><div class="ci-text"><strong>Empaque estandarizado</strong><span>Tienes empaques adecuados para cada tipo de producto y sabes el costo por unidad.</span></div></div>
+        <div class="checklist-item"><div class="ci-check">✓</div><div class="ci-text"><strong>Punto de reorden definido</strong><span>Sabes en qué nivel de stock debes reabastecer para no quedarte sin producto.</span></div></div>
+        <div class="checklist-item"><div class="ci-check">✓</div><div class="ci-text"><strong>Costos logísticos calculados</strong><span>Conoces cuánto cuesta empaquetar y enviar cada producto por unidad.</span></div></div>
+      </div>
+      <div class="checklist-group">
+        <h3>Envíos y experiencia</h3>
+        <div class="checklist-item"><div class="ci-check">✓</div><div class="ci-text"><strong>Mensajería contratada</strong><span>Tienes al menos una opción de mensajería con tarifas conocidas para envíos nacionales.</span></div></div>
+        <div class="checklist-item"><div class="ci-check">✓</div><div class="ci-text"><strong>Tracking implementado</strong><span>Compartes número de seguimiento con el cliente en cada envío.</span></div></div>
+        <div class="checklist-item"><div class="ci-check">✓</div><div class="ci-text"><strong>Política de devoluciones</strong><span>Tienes un proceso claro para devoluciones, cambios o reembolsos.</span></div></div>
+        <div class="checklist-item"><div class="ci-check">✓</div><div class="ci-text"><strong>Tiempos de entrega definidos</strong><span>Comunicas plazos realistas de entrega según la zona del cliente.</span></div></div>
+        <div class="checklist-item"><div class="ci-check">✓</div><div class="ci-text"><strong>Plan de contingencia</strong><span>Tienes respaldo si tu mensajería principal falla (pico de demanda, huelga, etc.).</span></div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="cta-band">
+    <h2>¿Operación lista? <span>Escala tu negocio</span></h2>
+    <p>La fase final te enseñará a analizar datos, automatizar procesos y expandir tu e-commerce hacia nuevos horizontes.</p>
+    <button class="btn-primary" disabled>Escalabilidad — Próximamente →</button>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <strong>SimpleCart Manager</strong> · Proyecto Académico – Herramienta de Desarrollo de Sitio Web II
+  <br>© Universidad de Panamá – CRUC | 2026
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
