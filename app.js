@@ -86,3 +86,22 @@
     newActive.forEach(n => activeNodeIndices.push(n));
     buildNodeGrid();
   }
+
+  /* ═══════════════════════════════════════
+     ANIMACIÓN 4 — COHETE: lanzamiento
+  ═══════════════════════════════════════ */
+  let launchCount = 0;
+  const orbits = ['LEO', 'MEO', 'GEO', 'Luna', 'Marte', 'Alpha Centauri'];
+
+  function launchRocket() {
+    const wrap = document.getElementById('rocketWrap');
+    launchCount++;
+    const newSpeed = Math.min(1 + launchCount * 0.5, 10);
+    document.getElementById('speedVal').textContent = newSpeed.toFixed(1) + 'x';
+    document.getElementById('orbitVal').textContent = orbits[Math.min(launchCount - 1, orbits.length - 1)];
+
+    wrap.classList.remove('launched');
+    void wrap.offsetWidth;
+    wrap.classList.add('launched');
+    setTimeout(() => wrap.classList.remove('launched'), 1400);
+  }

@@ -12,7 +12,7 @@
 <nav>
   <a class="nav-logo" href="#" onclick="showPage('inicio');return false;">
     <div class="nav-logo-icon nav-logo-icon-img">
-      <img src="img/logo.webp" alt="Logo" /></div>
+      <img src="./img/logo.webp" alt="Logo" /></div>
     <div class="nav-logo-text">SimpleCart<br>Manager</div>
   </a>
   <ul class="nav-links">
@@ -20,9 +20,8 @@
     <li><a href="#" id="nav-diagnostico" onclick="showPage('diagnostico');return false;">Diagnóstico y Modelo</a></li>
     <li><a href="#" id="nav-infraestructura" onclick="showPage('infraestructura');return false;">Infraestructura y Pagos</a></li>
     <li><a href="#" id="nav-logistica" onclick="showPage('logistica');return false;">Logística y Operaciones</a></li>
-    <li><a class="soon">Casos de Éxito / Blog</a></li>
-    <li><a class="soon">Recursos</a></li>
-    <li><a class="soon">Contacto</a></li>
+    <li><a href="#" id="nav-escalabilidad" onclick="showPage('escalabilidad');return false;">Escalabilidad</a></li>
+    <li><a class="#" id="nav-recursos" onclick="showPage('recursos');return false;">Recursos y Contacto</a></li>
   </ul>
   <button class="nav-cta" onclick="showPage('diagnostico')">Comenzar</button>
 </nav>
@@ -604,6 +603,311 @@
     <button class="btn-primary" disabled>Escalabilidad — Próximamente →</button>
   </div>
 </section>
+
+<!-- ══════════════════════════════════════
+     PÁGINA 5 — ESCALABILIDAD
+══════════════════════════════════════ -->
+<section class="page" id="page-escalabilidad">
+
+  <div class="page-hero">
+    <span class="section-label">Fase 4 · Escalabilidad</span>
+    <h1>Analítica, Automatización y <span>Crecimiento</span></h1>
+    <p>Una vez que tu operación es estable, el siguiente nivel es escalar. Aquí aprenderás a usar datos para tomar decisiones, automatizar procesos repetitivos, expandirte a nuevos canales y mercados, y preparar tu negocio para crecer sin colapsar.</p>
+  </div>
+
+  <!-- value strip with rocket animation -->
+  <div class="value-strip">
+    <div class="rocket-col">
+      <h2>Crecimiento inteligente</h2>
+      <p>Escalar no es solo vender más: es crecer de forma sostenible sin que la calidad del servicio, la salud financiera o la cordura operativa se vean comprometidas. Un negocio escalable tiene sistemas, automatizaciones y métricas que permiten multiplicar ventas sin multiplicar problemas.</p>
+      <p>Haz clic en el cohete para simular el despegue de tu negocio hacia nuevas etapas de crecimiento.</p>
+    </div>
+    <div class="anim-rocket-wrap" id="rocketWrap" onclick="launchRocket()">
+      <div class="anim-rocket-glow"></div>
+      <div class="anim-rocket-body">
+        <div class="anim-rocket-window">
+          <div class="anim-rocket-window-inner">🚀</div>
+        </div>
+        <div class="anim-rocket-fin-left"></div>
+        <div class="anim-rocket-fin-right"></div>
+        <div class="anim-rocket-flame" id="rocketFlame">
+          <div class="anim-flame-core"></div>
+          <div class="anim-flame-outer"></div>
+        </div>
+      </div>
+      <div class="anim-rocket-stats">
+        <div class="anim-rocket-stat">
+          <span class="anim-rocket-stat-label">Velocidad</span>
+          <span class="anim-rocket-stat-val" id="speedVal">1.0x</span>
+        </div>
+        <div class="anim-rocket-stat">
+          <span class="anim-rocket-stat-label">Órbita</span>
+          <span class="anim-rocket-stat-val" id="orbitVal">LEO</span>
+        </div>
+      </div>
+      <div class="anim-rocket-particle" id="particle1"></div>
+      <div class="anim-rocket-particle" id="particle2"></div>
+      <div class="anim-rocket-particle" id="particle3"></div>
+      <div class="anim-rocket-particle" id="particle4"></div>
+    </div>
+  </div>
+
+  <!-- Key areas -->
+  <div class="models-section">
+    <div class="section-header">
+      <span class="section-label">Pilares</span>
+      <h2 class="section-title">Áreas clave para escalar</h2>
+      <p class="section-sub">La escalabilidad se construye sobre estos pilares. Domínalos y tu negocio podrá crecer sin límites.</p>
+    </div>
+    <div class="models-grid">
+      <div class="model-card featured">
+        <span class="model-badge">Fundamental</span>
+        <h3>Analítica y KPIs</h3>
+        <p>Mide todo: tráfico, conversión, ticket promedio, CAC, LTV, retención. Sin datos, escalar es como volar a ciegas. Define tu panel de métricas clave.</p>
+        <div class="model-tags"><span class="tag">Dashboard</span><span class="tag">Métricas</span><span class="tag">Data-driven</span></div>
+      </div>
+      <div class="model-card">
+        <h3>Automatización</h3>
+        <p>Automatiza correos, notificaciones, facturación, inventario y atención al cliente. Cada proceso manual que elimines es tiempo para crecer.</p>
+        <div class="model-tags"><span class="tag">Email marketing</span><span class="tag">Chatbots</span><span class="tag">Workflows</span></div>
+      </div>
+      <div class="model-card">
+        <h3>Multi-canal</h3>
+        <p>Vende donde están tus clientes: web, redes sociales, marketplaces (Amazon, Mercado Libre), WhatsApp. Cada canal es una puerta de entrada.</p>
+        <div class="model-tags"><span class="tag">Marketplaces</span><span class="tag">Social commerce</span><span class="tag">Omnicanal</span></div>
+      </div>
+      <div class="model-card">
+        <h3>Expansión geográfica</h3>
+        <p>Lleva tu producto a nuevas ciudades o países. Requiere logística internacional, pasarelas multi-moneda y conocimiento de regulaciones locales.</p>
+        <div class="model-tags"><span class="tag">Internacional</span><span class="tag">Logística global</span><span class="tag">Multi-moneda</span></div>
+      </div>
+      <div class="model-card">
+        <h3>Equipo y procesos</h3>
+        <p>Documenta cada proceso, delega responsabilidades y construye un equipo que opere sin tu supervisión directa. El negocio no debe depender de una sola persona.</p>
+        <div class="model-tags"><span class="tag">Delegación</span><span class="tag">SOPs</span><span class="tag">Cultura</span></div>
+      </div>
+      <div class="model-card">
+        <h3>Tecnología e infraestructura</h3>
+        <p>Asegura que tu plataforma aguante picos de tráfico, que tus datos estén respaldados y que puedas integrar herramientas sin fricción.</p>
+        <div class="model-tags"><span class="tag">Hosting escalable</span><span class="tag">APIs</span><span class="tag">Backups</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Steps to scale -->
+  <div class="steps-section">
+    <div class="section-header">
+      <span class="section-label">Proceso</span>
+      <h2 class="section-title">Pasos para escalar tu e-commerce</h2>
+      <p class="section-sub">Sigue este roadmap para llevar tu negocio al siguiente nivel de forma ordenada y sostenible.</p>
+    </div>
+    <div class="steps-grid">
+      <div class="step-card">
+        <div class="step-num">01</div>
+        <h3>Audita tu operación actual</h3>
+        <p>Antes de escalar, identifica qué está funcionando y qué está al límite. Revisa ventas, costos, capacidad operativa y satisfacción del cliente.</p>
+        <ul><li>Analiza tus estados financieros</li><li>Mide tiempos de entrega reales</li><li>Encuesta a tus clientes</li><li>Identifica cuellos de botella</li></ul>
+      </div>
+      <div class="step-card">
+        <div class="step-num">02</div>
+        <h3>Define tus KPIs de crecimiento</h3>
+        <p>Establece métricas claras que te indiquen si estás creciendo de forma saludable. No todas las métricas importan igual.</p>
+        <ul><li>CAC (costo de adquisición)</li><li>LTV (valor de vida del cliente)</li><li>Tasa de conversión</li><li>Ticket promedio</li></ul>
+      </div>
+      <div class="step-card">
+        <div class="step-num">03</div>
+        <h3>Automatiza procesos clave</h3>
+        <p>Identifica tareas repetitivas y automatízalas. Desde el email de bienvenida hasta la facturación recurrente.</p>
+        <ul><li>Email marketing automatizado</li><li>Notificaciones de pedidos</li><li>Facturación electrónica</li><li>Alertas de inventario bajo</li></ul>
+      </div>
+      <div class="step-card">
+        <div class="step-num">04</div>
+        <h3>Expande tus canales de venta</h3>
+        <p>No pongas todos los huevos en una sola canasta. Abre nuevos frentes de venta para diversificar tu tráfico.</p>
+        <ul><li>Crea tu tienda en redes sociales</li><li>Publica en Mercado Libre / Amazon</li><li>Implementa venta por WhatsApp</li><li>Explora el comercio B2B</li></ul>
+      </div>
+      <div class="step-card">
+        <div class="step-num">05</div>
+        <h3>Prepara tu operación para el volumen</h3>
+        <p>Asegúrate de que tu logística, atención al cliente y tecnología puedan soportar 2x, 5x y 10x tu volumen actual.</p>
+        <ul><li>Negocia tarifas con mensajerías</li><li>Contrata personal de apoyo</li><li>Migra a hosting escalable</li><li>Crea un plan de contingencia</li></ul>
+      </div>
+      <div class="step-card">
+        <div class="step-num">06</div>
+        <h3>Mide, aprende, itera</h3>
+        <p>El crecimiento es un ciclo continuo. Mide resultados, aprende de los errores, ajusta tu estrategia y vuelve a empezar.</p>
+        <ul><li>Revisa KPIs semanalmente</li><li>Haz experimentos A/B</li><li>Escucha a tu equipo y clientes</li><li>Actualiza tu plan de crecimiento</li></ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Checklist -->
+  <div class="checklist-section">
+    <div class="section-header">
+      <span class="section-label">Checklist</span>
+      <h2 class="section-title">¿Estás listo para escalar?</h2>
+      <p class="section-sub">Marca estos puntos para saber si tu negocio tiene una base sólida para crecer. Si cumples al menos 8, estás listo para despegar.</p>
+    </div>
+    <div class="checklist-wrapper">
+      <div class="checklist-group">
+        <h3>Métricas y automatización</h3>
+        <div class="checklist-item"><div class="ci-check">✓</div><div class="ci-text"><strong>KPIs definidos</strong><span>Tienes métricas claras de CAC, LTV, conversión y ticket promedio.</span></div></div>
+        <div class="checklist-item"><div class="ci-check">✓</div><div class="ci-text"><strong>Dashboard activo</strong><span>Monitoreas tus métricas en tiempo real con un panel de control.</span></div></div>
+        <div class="checklist-item"><div class="ci-check">✓</div><div class="ci-text"><strong>Procesos automatizados</strong><span>Correos, facturas y notificaciones se generan sin intervención manual.</span></div></div>
+        <div class="checklist-item"><div class="ci-check">✓</div><div class="ci-text"><strong>CRM implementado</strong><span>Gestionas tus clientes y sus historiales en un sistema centralizado.</span></div></div>
+        <div class="checklist-item"><div class="ci-check">✓</div><div class="ci-text"><strong>Chatbot o atención automatizada</strong><span>Respondes preguntas frecuentes sin saturar tu tiempo.</span></div></div>
+      </div>
+      <div class="checklist-group">
+        <h3>Canales y crecimiento</h3>
+        <div class="checklist-item"><div class="ci-check">✓</div><div class="ci-text"><strong>Multi-canal activo</strong><span>Vendes en al menos 2 canales diferentes (web, redes, marketplace).</span></div></div>
+        <div class="checklist-item"><div class="ci-check">✓</div><div class="ci-text"><strong>Expansión geográfica evaluada</strong><span>Has analizado viabilidad de vender en otras ciudades o países.</span></div></div>
+        <div class="checklist-item"><div class="ci-check">✓</div><div class="ci-text"><strong>Capacidad operativa sobredimensionada</strong><span>Puedes manejar 2x tu volumen actual sin colapsar.</span></div></div>
+        <div class="checklist-item"><div class="ci-check">✓</div><div class="ci-text"><strong>Equipo delegado</strong><span>Hay personas clave que operan sin tu supervisión directa.</span></div></div>
+        <div class="checklist-item"><div class="ci-check">✓</div><div class="ci-text"><strong>Plan de crecimiento documentado</strong><span>Tienes un roadmap escrito con objetivos, plazos y recursos necesarios.</span></div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="cta-band">
+    <h2>¿Listo para despegar? <span>Explora todos los recursos</span></h2>
+    <p>Descarga guías, plantillas y herramientas que te acompañarán en cada etapa del crecimiento de tu e-commerce.</p>
+    <button class="btn-primary" onclick="showPage('recursos')">Recursos y Contacto →</button>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     PÁGINA 6 — RECURSOS Y CONTACTO
+══════════════════════════════════════ -->
+<!-- ── RECURSOS ── -->
+<section class="page" id="page-recursos">
+  <div class="page-hero">
+    <span class="section-label">Recursos</span>
+    <h1>Todo lo que necesitas para <span>impulsar</span> tu e-commerce</h1>
+    <p>Guías, plantillas, herramientas y contenido educativo gratuito para emprendedores y empresas.</p>
+  </div>
+
+  <div class="value-strip">
+    <div class="value-grid">
+      <div class="value-card">
+        <div class="value-icon">📚</div>
+        <h3>Guías prácticas</h3>
+        <p>Documentos descargables con pasos concretos para cada área de tu negocio.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-icon">📋</div>
+        <h3>Plantillas editables</h3>
+        <p>Formatos listos para usar: inventarios, presupuestos, planes de acción y más.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-icon">🔧</div>
+        <h3>Herramientas recomendadas</h3>
+        <p>Selección curada de software y servicios para cada etapa de tu operación.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-icon">🎓</div>
+        <h3>Cursos y webinars</h3>
+        <p>Contenido formativo gratuito para seguir aprendiendo y mejorando.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="models-section">
+    <div class="section-header">
+      <span class="section-label">Biblioteca</span>
+      <h2 class="section-title">Explora nuestros recursos</h2>
+      <p class="section-sub">Seleccionados para emprendedores como tú.</p>
+    </div>
+    <div class="models-grid">
+      <div class="model-card">
+        <div class="model-icon">📕</div>
+        <h3>Guía de inicio rápido para e-commerce</h3>
+        <p>Los 10 pasos esenciales para lanzar tu tienda online desde cero, con checklist, proveedores y estrategias de lanzamiento.</p>
+        <div class="model-tags"><span class="tag">Guía</span><span class="tag">Inicio</span><span class="tag">PDF</span></div>
+      </div>
+      <div class="model-card">
+        <div class="model-icon">📗</div>
+        <h3>Plantilla de plan de negocios</h3>
+        <p>Formato completo con secciones de análisis de mercado, proyecciones financieras y estrategia operativa.</p>
+        <div class="model-tags"><span class="tag">Plantilla</span><span class="tag">Negocios</span><span class="tag">Excel</span></div>
+      </div>
+      <div class="model-card">
+        <div class="model-icon">📘</div>
+        <h3>Dashboard de KPIs comerciales</h3>
+        <p>Tablero en Google Sheets con métricas clave: ventas, conversión, costo de adquisición y valor de vida del cliente.</p>
+        <div class="model-tags"><span class="tag">KPI</span><span class="tag">Dashboard</span><span class="tag">Sheets</span></div>
+      </div>
+      <div class="model-card">
+        <div class="model-icon">📙</div>
+        <h3>Lista de verificación logística</h3>
+        <p>Checklist completo para evaluar y optimizar tu operación logística: inventario, empaque, envíos y devoluciones.</p>
+        <div class="model-tags"><span class="tag">Checklist</span><span class="tag">Logística</span><span class="tag">PDF</span></div>
+      </div>
+      <div class="model-card">
+        <div class="model-icon">📓</div>
+        <h3>Webinar: Pagos online en LATAM</h3>
+        <p>Grabación del webinar donde analizamos pasarelas, métodos locales, tasas de aprobación y fraude.</p>
+        <div class="model-tags"><span class="tag">Webinar</span><span class="tag">Pagos</span><span class="tag">Video</span></div>
+      </div>
+      <div class="model-card">
+        <div class="model-icon">📒</div>
+        <h3>Calculadora de costos de envío</h3>
+        <p>Herramienta interactiva para calcular costos logísticos por producto, destino y volumen, optimizando tu margen.</p>
+        <div class="model-tags"><span class="tag">Herramienta</span><span class="tag">Costos</span><span class="tag">Online</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="checklist-section">
+    <div class="section-header">
+      <span class="section-label">Recomendado</span>
+      <h2 class="section-title">Empieza con estos recursos hoy</h2>
+      <p class="section-sub">Descarga gratis y comienza a aplicar.</p>
+    </div>
+    <div class="checklist-wrapper">
+      <div class="checklist-group">
+        <h3>Recursos gratuitos</h3>
+        <div class="checklist-item"><div class="ci-check">✓</div><div class="ci-text"><strong>Guía de inicio rápido</strong><span>PDF descargable con los 10 pasos esenciales.</span></div></div>
+        <div class="checklist-item"><div class="ci-check">✓</div><div class="ci-text"><strong>Plantilla de plan de negocios</strong><span>Formato listo para llenar en Google Docs.</span></div></div>
+        <div class="checklist-item"><div class="ci-check">✓</div><div class="ci-text"><strong>Dashboard de KPIs</strong><span>Google Sheets con fórmulas preconfiguradas.</span></div></div>
+        <div class="checklist-item"><div class="ci-check">✓</div><div class="ci-text"><strong>Checklist logístico</strong><span>Evaluación completa de tu operación.</span></div></div>
+        <div class="checklist-item"><div class="ci-check">✓</div><div class="ci-text"><strong>Webinar grabado</strong><span>Acceso inmediato al contenido formativo.</span></div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="cta-band">
+    <h2>Accede a todos los recursos <span>gratis</span></h2>
+    <p>Regístrate y obtén acceso ilimitado a nuestra biblioteca de recursos educativos.</p>
+    <button class="btn-primary" onclick="showPage('contacto');return false;">Solicita la guía informativa →</button>
+  </div>
+  <footer class="site-footer">
+  <div class="footer-logo">
+            <img src="./img/logo.webp" alt="Logo">
+        </div>
+        <div class="footer-content">
+            <div class="footer-contact">
+                <h3>Contacto</h3>
+                <p>Dirección: Universidad de Panamá – CRUC</p>
+                <p>Teléfono: +507 6000-0000</p>
+                <p>Email: SimpleCart@Manager.com</p>
+            </div>
+            <div class="footer-links">
+                <h3>Enlaces</h3>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="#">Contacto</a></li>
+                   
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h3>Síguenos</h3>
+                <a href="https//:www.facebook.com" target="_blank" rel="noopener noreferrer"><img src="./img/facebook.svg" alt="FB"></a>
+                <a href="#" target="_blank" rel="noopener noreferrer"><img src="./img/twitterx.svg" alt="X"></a>
+                <a href="#" target="_blank" rel="noopener noreferrer"><img src="./img/instagram.svg" alt="IG"></a>
+            </div>
+        </div>
+</section>
+</footer>
 
 <!-- ── FOOTER ── -->
 <footer>
